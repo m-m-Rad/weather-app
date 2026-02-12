@@ -1,0 +1,11 @@
+<div class="container">
+  <select name="location" id="location">
+    @for (location of locations; track $index) {
+      <option [value]="location.value">{{ location.name }}</option>
+    }
+  </select>
+  <div class="button-container">
+    <button class="right">C</button>
+    <button class="left active">F</button>
+  </div>
+</div>

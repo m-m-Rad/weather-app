@@ -1,4 +1,12 @@
 article {
   min-block-size: 100svh;
-  background: var(--main-background);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  padding: 3rem 2rem;
+  max-width: 1300px;
+  margin-inline: auto;
+}
+div {
+  grid-row: 2/-1;
 }

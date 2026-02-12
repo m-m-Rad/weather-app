@@ -2,6 +2,12 @@
 :root {
   --main-background: linear-gradient(45deg, #f0b5ce, #8c6bae);
 }
+@font-face {
+  font-family: 'vazir';
+  src: url('/font/Vazirmatn-FD-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
 
 *,
 *::before,
@@ -59,7 +65,7 @@ h4 {
 
 p,
 li {
-  /* text-wrap: pretty; */
+  text-wrap: pretty;
 }
 
 img,
