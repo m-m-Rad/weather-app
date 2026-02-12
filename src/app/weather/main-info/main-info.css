@@ -1,0 +1,4 @@
+article {
+  min-block-size: 100svh;
+  background: var(--main-background);
+}
