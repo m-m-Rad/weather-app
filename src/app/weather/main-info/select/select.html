@@ -1,5 +1,5 @@
 <div class="container">
-  <select name="location" id="location">
+  <select (change)="onChange(loc.value)" name="location" id="location" #loc>
     @for (location of locations; track $index) {
       <option [value]="location.value">{{ location.name }}</option>
     }
