@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 import { Location } from './select.model';
 
 @Component({
@@ -15,4 +15,9 @@ export class Select {
     { name: 'تبریز', value: 'tabriz' },
     { name: 'شیراز', value: 'shiraz' },
   ];
+  type: WritableSignal<'C' | 'F'> = signal('C');
+  onClick(newType: 'C' | 'F') {
+    if (newType === this.type()) return;
+    this.type.set(newType);
+  }
 }

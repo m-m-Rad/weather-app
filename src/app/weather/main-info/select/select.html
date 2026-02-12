@@ -5,7 +5,7 @@
     }
   </select>
   <div class="button-container">
-    <button class="right">C</button>
-    <button class="left active">F</button>
+    <button (click)="onClick('C')" class="right" [class.active]="type() === 'C'">C</button>
+    <button (click)="onClick('F')" class="left" [class.active]="type() === 'F'">F</button>
   </div>
 </div>

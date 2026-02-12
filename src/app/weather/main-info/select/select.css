@@ -25,6 +25,34 @@ select > option {
   color: black;
 }
 .button-container {
+  background-color: rgba(255, 255, 255, 0.16);
+  display: flex;
+  gap: 0.2rem;
+  border-radius: 1.5rem;
+}
+button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-family: 'vazir';
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-radius: 1.5rem;
+}
+.left.active {
+  background-color: #caaccf;
+  padding: 0 1.3rem;
+  margin-right: -10px;
+}
+.right.active {
+  background-color: #caaccf;
+
+  padding: 0 1.3rem;
+  margin-left: -10px;
+}
+
+/* .button-container {
   position: relative;
   display: flex;
   button {
@@ -52,4 +80,4 @@ select > option {
     padding-left: 2rem;
     z-index: 1;
   }
-}
+} */
