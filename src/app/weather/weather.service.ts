@@ -9,13 +9,15 @@ export class WeatherService {
   private DAYS = '4';
   private KEY = '66faa531cebd492baa4115539261002';
   SelectedCity = signal('tehran');
+  isFetching = signal(true);
   currentMain: WritableSignal<any> = signal({});
   weather$ = toObservable(this.SelectedCity).pipe(
-    switchMap((city) =>
-      this.http.get<any>(
+    switchMap((city) => {
+      this.isFetching.set(true);
+      return this.http.get<any>(
         `http://api.weatherapi.com/v1/forecast.json?key=${this.KEY}&q=${city}&days=${this.DAYS}&hour=16`,
-      ),
-    ),
+      );
+    }),
     shareReplay(1),
   );
 

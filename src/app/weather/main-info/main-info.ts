@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal, WritableSignal } from '@angular/core';
+import { Component, DestroyRef, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { Select } from './select/select';
 import { WeatherService } from '../weather.service';
 
@@ -10,12 +10,13 @@ import { WeatherService } from '../weather.service';
 })
 export class MainInfo implements OnInit {
   private weatherService = inject(WeatherService);
-  isFetching = signal(true);
+  private destroy = inject(DestroyRef);
+  isFetching = this.weatherService.isFetching;
   error = signal('');
   time = this.weatherService.getFarsiDateObject();
   mainInfo: WritableSignal<any> = signal({});
   ngOnInit() {
-    this.weatherService.weather$.subscribe({
+    const sub = this.weatherService.weather$.subscribe({
       next: (respond) => {
         this.isFetching.set(false);
         this.weatherService.currentMain.set(respond.current);
@@ -23,6 +24,10 @@ export class MainInfo implements OnInit {
         console.log(this.weatherService.currentMain());
       },
       error: (err) => this.error.set('مشکلی پیش آمد'),
+      complete: () =>
+        this.destroy.onDestroy(() => {
+          sub.unsubscribe();
+        }),
     });
   }
 }
