@@ -8,11 +8,17 @@
   font-weight: 500;
   font-style: normal;
 }
+@font-face {
+  font-family: 'vazir';
+  src: url('/font/Vazirmatn-Light.woff2') format('woff2');
+  font-weight: 300;
+}
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: 'vazir';
 }
 
 /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */

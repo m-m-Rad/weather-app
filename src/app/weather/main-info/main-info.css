@@ -7,6 +7,51 @@ article {
   max-width: 1300px;
   margin-inline: auto;
 }
-div {
-  grid-row: 2/-1;
+.main-info {
+  /* grid-row: 2/-1; */
+  color: white;
+  font-weight: 300;
+  direction: rtl;
+  text-align: left;
+  line-height: 2;
+}
+.icon {
+  margin: 2rem 0;
+}
+h1 {
+  font-weight: 300;
+  font-size: 6rem;
+}
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  margin-top: 1.5rem;
+  gap: 2rem;
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  svg {
+    margin-bottom: 0.2rem;
+  }
+}
+@media (max-width: 625px) {
+  .info-row {
+    display: grid;
+    .svg-line {
+      display: none;
+    }
+    /* flex-direction: column;
+    align-items: last baseline;
+    .svg-line {
+      display: none;
+    }
+    p {
+      flex-basis: 100%;
+      flex-grow: 1;
+    } */
+  }
 }
