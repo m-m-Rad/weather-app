@@ -6,11 +6,25 @@ article {
   padding: 3rem 2rem;
   max-width: 1300px;
   margin-inline: auto;
+  position: relative;
+}
+.loader {
+  height: 10rem;
+  position: absolute;
+  top: 10rem;
+  left: 2rem;
+}
+.error {
+  color: white;
+}
+.line-margin {
+  margin-inline: 1rem;
 }
 .main-info {
   /* grid-row: 2/-1; */
   color: white;
   font-weight: 300;
+  font-size: 1.2rem;
   direction: rtl;
   text-align: left;
   line-height: 2;
@@ -19,8 +33,10 @@ article {
   margin: 2rem 0;
 }
 h1 {
+  font-family: 'vazir num';
   font-weight: 300;
-  font-size: 6rem;
+  font-size: 10rem;
+  margin-left: -1rem;
 }
 .info-row {
   display: flex;
@@ -41,6 +57,7 @@ h1 {
 @media (max-width: 625px) {
   .info-row {
     display: grid;
+    place-items: center stretch;
     .svg-line {
       display: none;
     }

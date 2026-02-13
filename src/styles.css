@@ -13,6 +13,11 @@
   src: url('/font/Vazirmatn-Light.woff2') format('woff2');
   font-weight: 300;
 }
+@font-face {
+  font-family: 'vazir num';
+  src: url('/font/Vazirmatn-RD-FD-Light.woff2') format('woff2');
+  font-weight: 300;
+}
 
 *,
 *::before,

@@ -1,4 +1,37 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { computed, inject, Injectable, signal, WritableSignal } from '@angular/core';
+import { toObservable } from '@angular/core/rxjs-interop';
+import { shareReplay, switchMap } from 'rxjs';
 
 @Injectable()
-export class WeatherService {}
+export class WeatherService {
+  private http = inject(HttpClient);
+  private DAYS = '4';
+  private KEY = '66faa531cebd492baa4115539261002';
+  SelectedCity = signal('tehran');
+  currentMain: WritableSignal<any> = signal({});
+  weather$ = toObservable(this.SelectedCity).pipe(
+    switchMap((city) =>
+      this.http.get<any>(
+        `http://api.weatherapi.com/v1/forecast.json?key=${this.KEY}&q=${city}&days=${this.DAYS}&hour=16`,
+      ),
+    ),
+    shareReplay(1),
+  );
+
+  getFarsiDateObject(date: Date = new Date()) {
+    const locale = 'fa-IR-u-ca-persian';
+
+    return {
+      monthName: new Intl.DateTimeFormat(locale, { month: 'long' }).format(date),
+      weekday: new Intl.DateTimeFormat(locale, { weekday: 'long' }).format(date),
+      dayOfMonth: new Intl.DateTimeFormat(locale, { day: 'numeric' }).format(date),
+      year: new Intl.DateTimeFormat(locale, { year: 'numeric' }).format(date),
+      time: new Intl.DateTimeFormat(locale, {
+        hour: 'numeric',
+        minute: '2-digit',
+      }).format(date),
+    };
+  }
+}
+// http://api.weatherapi.com/v1/forecast.json?key=66faa531cebd492baa4115539261002&q=shiraz&
