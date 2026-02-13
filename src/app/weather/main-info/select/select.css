@@ -10,7 +10,7 @@ select {
   background-color: rgba(255, 255, 255, 0.09);
   padding: 0.3rem 0.5rem;
   padding-left: 2rem;
-  border: white solid 0.15rem;
+  border: rgba(255, 255, 255, 0.16) solid 0.15rem;
   border-radius: 1rem;
   color: #ffffff;
   -webkit-appearance: none;
