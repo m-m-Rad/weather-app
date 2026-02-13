@@ -15,13 +15,16 @@ export class MainInfo implements OnInit {
   error = signal('');
   time = this.weatherService.getFarsiDateObject();
   mainInfo: WritableSignal<any> = signal({});
+  secInfo: WritableSignal<any> = signal({});
   ngOnInit() {
     const sub = this.weatherService.weather$.subscribe({
       next: (respond) => {
         this.isFetching.set(false);
         this.weatherService.currentMain.set(respond.current);
         this.mainInfo.set(respond.current);
-        console.log(this.weatherService.currentMain());
+        console.log(respond.forecast.forecastday);
+        this.weatherService.forCasts.set(respond.forecast.forecastday);
+        this.secInfo.set(this.weatherService.forCasts()[0]);
       },
       error: (err) => this.error.set('مشکلی پیش آمد'),
       complete: () =>

@@ -11,6 +11,7 @@ export class WeatherService {
   SelectedCity = signal('tehran');
   isFetching = signal(true);
   currentMain: WritableSignal<any> = signal({});
+  forCasts: WritableSignal<any> = signal({});
   weather$ = toObservable(this.SelectedCity).pipe(
     switchMap((city) => {
       this.isFetching.set(true);
