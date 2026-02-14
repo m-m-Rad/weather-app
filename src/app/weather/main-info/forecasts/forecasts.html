@@ -1,7 +1,10 @@
 @if (forecastDays().length > 0) {
   @for (day of forecastDays(); track $index) {
     <section class="card">
-      <p>{{ day.day.avgtemp_c }}</p>
+      <p>
+        {{ day.day.avgtemp_c }}
+        <app-symbol size="small" />
+      </p>
       <p>{{ day.day.condition.code }}</p>
       <p>{{ day.date_epoch }}</p>
     </section>

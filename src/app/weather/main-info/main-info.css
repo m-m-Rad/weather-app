@@ -33,6 +33,7 @@ h1 {
   font-family: 'vazir num';
   font-weight: 300;
   font-size: 10rem;
+  direction: ltr;
   margin-left: -1rem;
 }
 .info-row {

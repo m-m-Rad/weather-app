@@ -2,10 +2,11 @@ import { Component, DestroyRef, inject, OnInit, signal, WritableSignal } from '@
 import { Select } from './select/select';
 import { WeatherService } from '../weather.service';
 import { Forecasts } from './forecasts/forecasts';
+import { Symbol } from '../symbol/symbol';
 
 @Component({
   selector: 'app-main-info',
-  imports: [Select, Forecasts],
+  imports: [Select, Forecasts, Symbol],
   templateUrl: './main-info.html',
   styleUrl: './main-info.css',
 })

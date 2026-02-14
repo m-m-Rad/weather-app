@@ -1,5 +1,5 @@
 import { Component, inject, signal, viewChild, WritableSignal } from '@angular/core';
-import { Location } from './select.model';
+import { Degree, Location } from './select.model';
 import { WeatherService } from '../../weather.service';
 
 @Component({
@@ -17,12 +17,13 @@ export class Select {
     { name: 'تبریز', value: 'tabriz' },
     { name: 'شیراز', value: 'shiraz' },
   ];
-  type: WritableSignal<'C' | 'F'> = signal('C');
+  type: WritableSignal<Degree> = signal('C');
   onChange(newSelect: string) {
     this.weatherService.SelectedCity.set(newSelect);
   }
   onClick(newType: 'C' | 'F') {
     if (newType === this.type()) return;
     this.type.set(newType);
+    this.weatherService.SelectedDegSymbol.set(newType);
   }
 }

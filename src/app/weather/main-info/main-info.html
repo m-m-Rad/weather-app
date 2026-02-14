@@ -3,7 +3,7 @@
   @if (!isFetching() && !error()) {
     <section class="main-info">
       <p class="icon">svg</p>
-      <h1>{{ mainInfo().temp_c }}</h1>
+      <h1>{{ mainInfo().temp_c }} <app-symbol size="big" /></h1>
       <p>{{ time.dayOfMonth + ' ' + time.monthName + ' ' + time.year }}</p>
       <p>{{ time.weekday }}<span class="line-margin">|</span> {{ time.time }}</p>
       <div class="info-row">

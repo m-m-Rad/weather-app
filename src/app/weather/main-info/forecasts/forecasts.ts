@@ -1,9 +1,10 @@
 import { Component, computed, effect, inject } from '@angular/core';
 import { WeatherService } from '../../weather.service';
+import { Symbol } from '../../symbol/symbol';
 
 @Component({
   selector: 'app-forecasts',
-  imports: [],
+  imports: [Symbol],
   templateUrl: './forecasts.html',
   styleUrl: './forecasts.css',
 })

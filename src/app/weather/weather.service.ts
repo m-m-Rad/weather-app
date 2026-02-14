@@ -2,16 +2,20 @@ import { HttpClient } from '@angular/common/http';
 import { computed, inject, Injectable, signal, WritableSignal } from '@angular/core';
 import { toObservable } from '@angular/core/rxjs-interop';
 import { shareReplay, switchMap } from 'rxjs';
+import { Degree } from './main-info/select/select.model';
 
 @Injectable()
 export class WeatherService {
   private http = inject(HttpClient);
   private DAYS = '4';
   private KEY = '66faa531cebd492baa4115539261002';
+
   SelectedCity = signal('tehran');
+  SelectedDegSymbol: WritableSignal<Degree> = signal('DEFAULT');
   isFetching = signal(true);
   currentMain: WritableSignal<any> = signal({});
   forCasts: WritableSignal<any[]> = signal([]);
+
   weather$ = toObservable(this.SelectedCity).pipe(
     switchMap((city) => {
       this.isFetching.set(true);
