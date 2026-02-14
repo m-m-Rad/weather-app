@@ -1,10 +1,11 @@
 import { Component, DestroyRef, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { Select } from './select/select';
 import { WeatherService } from '../weather.service';
+import { Forecasts } from './forecasts/forecasts';
 
 @Component({
   selector: 'app-main-info',
-  imports: [Select],
+  imports: [Select, Forecasts],
   templateUrl: './main-info.html',
   styleUrl: './main-info.css',
 })
