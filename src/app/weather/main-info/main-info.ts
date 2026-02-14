@@ -23,7 +23,6 @@ export class MainInfo implements OnInit {
         this.isFetching.set(false);
         this.weatherService.currentMain.set(respond.current);
         this.mainInfo.set(respond.current);
-        console.log(respond.forecast.forecastday);
         this.weatherService.forCasts.set(respond.forecast.forecastday);
         this.secInfo.set(this.weatherService.forCasts()[0]);
       },

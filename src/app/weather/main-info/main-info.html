@@ -127,5 +127,7 @@
   }
 </article>
 <article class="forecasts-container">
-  <app-forecasts />
+  @if (!isFetching() && !error()) {
+    <app-forecasts />
+  }
 </article>
