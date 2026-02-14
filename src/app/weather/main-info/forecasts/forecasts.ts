@@ -1,4 +1,4 @@
-import { Component, computed, effect, inject } from '@angular/core';
+import { Component, computed, effect, inject, signal } from '@angular/core';
 import { WeatherService } from '../../weather.service';
 import { Symbol } from '../../symbol/symbol';
 
@@ -10,16 +10,11 @@ import { Symbol } from '../../symbol/symbol';
 })
 export class Forecasts {
   weatherService = inject(WeatherService);
-  forecastDays = computed(() => this.weatherService.forCasts());
-  days: any[] = [];
-
-  constructor() {
-    effect(() => {
-      if (this.forecastDays().length > 0) {
-        this.forecastDays().shift();
-        this.days = this.forecastDays();
-        console.log(this.days);
-      }
-    });
-  }
+  forecastDays = computed(() => {
+    const days = this.weatherService.forCasts();
+    if (days.length !== 0 && days.length === 4) {
+      return this.weatherService.forCasts().slice(1);
+    }
+    return days;
+  });
 }
