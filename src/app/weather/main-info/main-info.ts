@@ -3,10 +3,11 @@ import { Select } from './select/select';
 import { WeatherService } from '../weather.service';
 import { Forecasts } from './forecasts/forecasts';
 import { Symbol } from '../symbol/symbol';
+import { WeatherIcon } from '../weather-icon/weather-icon';
 
 @Component({
   selector: 'app-main-info',
-  imports: [Select, Forecasts, Symbol],
+  imports: [Select, Forecasts, Symbol, WeatherIcon],
   templateUrl: './main-info.html',
   styleUrl: './main-info.css',
 })

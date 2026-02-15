@@ -40,5 +40,10 @@ export class WeatherService {
       }).format(date),
     };
   }
+  toFarsiDate(time: number): string {
+    return new Intl.DateTimeFormat('fa-IR-u-ca-persian', {
+      weekday: 'long',
+    }).format(new Date(time * 1000));
+  }
 }
 // http://api.weatherapi.com/v1/forecast.json?key=66faa531cebd492baa4115539261002&q=shiraz&

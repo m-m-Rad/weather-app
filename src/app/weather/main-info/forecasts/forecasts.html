@@ -5,8 +5,10 @@
         {{ day.day.avgtemp_c }}
         <app-symbol size="small" />
       </p>
-      <p>{{ day.day.condition.code }}</p>
-      <p>{{ day.date_epoch }}</p>
+      <p>
+        <app-weather-icon [small]="true" [code]="day.day.condition.code" [isNight]="1" />
+      </p>
+      <p>{{ toFarsiDate(day.date_epoch) }}</p>
     </section>
   }
 }

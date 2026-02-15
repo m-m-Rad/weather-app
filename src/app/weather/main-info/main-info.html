@@ -2,7 +2,9 @@
 <article>
   @if (!isFetching() && !error()) {
     <section class="main-info">
-      <p class="icon">svg</p>
+      <p class="icon">
+        <app-weather-icon [code]="mainInfo().condition.code" [isNight]="mainInfo().is_day" />
+      </p>
       <h1>{{ mainInfo().temp_c }} <app-symbol size="big" /></h1>
       <p>{{ time.dayOfMonth + ' ' + time.monthName + ' ' + time.year }}</p>
       <p>{{ time.weekday }}<span class="line-margin">|</span> {{ time.time }}</p>
