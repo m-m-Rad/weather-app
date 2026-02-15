@@ -4,10 +4,11 @@ import { WeatherService } from '../weather.service';
 import { Forecasts } from './forecasts/forecasts';
 import { Symbol } from '../symbol/symbol';
 import { WeatherIcon } from '../weather-icon/weather-icon';
+import { TempPipe } from '../symbol/temp.pipe';
 
 @Component({
   selector: 'app-main-info',
-  imports: [Select, Forecasts, Symbol, WeatherIcon],
+  imports: [Select, Forecasts, Symbol, WeatherIcon, TempPipe],
   templateUrl: './main-info.html',
   styleUrl: './main-info.css',
 })
@@ -16,6 +17,7 @@ export class MainInfo implements OnInit {
   private destroy = inject(DestroyRef);
   isFetching = this.weatherService.isFetching;
   error = signal('');
+  symbol = this.weatherService.SelectedDegSymbol;
   time = this.weatherService.getFarsiDateObject();
   mainInfo: WritableSignal<any> = signal({});
   secInfo: WritableSignal<any> = signal({});

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { computed, inject, Injectable, signal, WritableSignal } from '@angular/core';
+import { inject, Injectable, signal, WritableSignal } from '@angular/core';
 import { toObservable } from '@angular/core/rxjs-interop';
 import { shareReplay, switchMap } from 'rxjs';
 import { Degree } from './main-info/select/select.model';
@@ -46,4 +46,3 @@ export class WeatherService {
     }).format(new Date(time * 1000));
   }
 }
-// http://api.weatherapi.com/v1/forecast.json?key=66faa531cebd492baa4115539261002&q=shiraz&

@@ -2,7 +2,7 @@
   @for (day of forecastDays(); track $index) {
     <section class="card">
       <p>
-        {{ day.day.avgtemp_c }}
+        {{ day.day.avgtemp_c | temp: symbol() }}
         <app-symbol size="small" />
       </p>
       <p>
