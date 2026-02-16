@@ -1,6 +1,6 @@
 :host {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 2fr 1fr;
   background: var(--main-background);
 }
 main {
@@ -11,4 +11,9 @@ article {
   min-width: 31rem;
   box-shadow: inset 3px 0 rgba(255, 255, 255, 0.1);
   padding: 1rem;
+}
+@media (width<980px) {
+  :host {
+    grid-template-columns: 1fr;
+  }
 }

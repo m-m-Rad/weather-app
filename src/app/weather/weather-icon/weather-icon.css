@@ -6,3 +6,9 @@ img {
   height: 2rem;
   margin-inline: auto;
 }
+@media (width<600px) {
+  img {
+    height: 3rem;
+    margin-bottom: 1rem;
+  }
+}
