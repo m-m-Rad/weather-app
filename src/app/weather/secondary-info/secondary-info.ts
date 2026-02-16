@@ -11,5 +11,6 @@ import { Quality } from './quality/quality';
 })
 export class SecondaryInfo {
   weatherService = inject(WeatherService);
+  isFetching = this.weatherService.isFetching;
   info = computed(() => this.weatherService.forCasts()[0]);
 }

@@ -1,4 +1,4 @@
-@if (info()) {
+@if (!isFetching()) {
   <section class="clocks-container">
     <app-clock title="طلوع خورشید" [timeInput]="info().astro.sunrise" />
     <app-clock title="غروب خورشید" [timeInput]="info().astro.sunset" />
