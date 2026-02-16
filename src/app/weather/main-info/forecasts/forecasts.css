@@ -15,3 +15,13 @@
   text-align: center;
   border: 1px solid rgba(168, 168, 168, 0.3);
 }
+@media (width<500px) {
+  :host {
+    display: grid;
+  }
+  .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -28,7 +28,6 @@ h3 {
 *::after {
   box-sizing: border-box;
   font-family: 'vazir';
-  outline: black solid 1px;
 }
 
 /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */

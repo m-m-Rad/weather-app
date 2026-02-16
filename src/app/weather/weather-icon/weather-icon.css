@@ -11,4 +11,7 @@ img {
     height: 3rem;
     margin-bottom: 1rem;
   }
+  .small {
+    margin-bottom: 0;
+  }
 }

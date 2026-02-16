@@ -8,7 +8,7 @@ main {
 }
 article {
   background: linear-gradient(144deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 50%);
-  min-width: 31rem;
+  /* min-width: 31rem; */
   box-shadow: inset 3px 0 rgba(255, 255, 255, 0.1);
   padding: 1rem;
 }
