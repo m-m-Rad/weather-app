@@ -1,4 +1,14 @@
-main {
+:host {
+  display: grid;
+  grid-template-columns: 1fr auto;
   background: var(--main-background);
+}
+main {
   min-block-size: 100svh;
+}
+article {
+  background: linear-gradient(144deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 50%);
+  min-width: 31rem;
+  box-shadow: inset 3px 0 rgba(255, 255, 255, 0.1);
+  padding: 1rem;
 }
