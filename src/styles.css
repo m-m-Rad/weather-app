@@ -18,6 +18,11 @@
   src: url('/font/Vazirmatn-RD-FD-Light.woff2') format('woff2');
   font-weight: 300;
 }
+h3 {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: white;
+}
 
 *,
 *::before,

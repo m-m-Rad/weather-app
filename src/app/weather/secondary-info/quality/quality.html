@@ -1,0 +1,12 @@
+<h3>{{ title() }}</h3>
+<div class="container">
+  <div>
+    <img [src]="uvInfo().url" [alt]="uvInfo().name" />
+    <div class="info">
+      <p>{{ uvFixed() }}/10</p>
+      <p>
+        {{ uvInfo().name }}
+      </p>
+    </div>
+  </div>
+</div>

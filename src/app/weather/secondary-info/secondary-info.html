@@ -4,5 +4,7 @@
     <app-clock title="غروب خورشید" [timeInput]="info().astro.sunset" />
   </section>
   <p class="line"></p>
-  <section>Uv</section>
+  <section>
+    <app-quality [uv]="info().day.uv" title="فرابنفش" />
+  </section>
 }
