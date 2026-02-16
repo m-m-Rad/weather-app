@@ -1,6 +1,7 @@
 @if (info()) {
-  <section>
-    <app-clock />
+  <section class="clocks-container">
+    <app-clock title="طلوع خورشید" [timeInput]="info().astro.sunrise" />
+    <app-clock title="غروب خورشید" [timeInput]="info().astro.sunset" />
   </section>
   <p>-------------</p>
   <section>Uv</section>

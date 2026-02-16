@@ -1,1 +1,30 @@
-<p>clock works!</p>
+<div class="container">
+  <h3>{{ title() }}</h3>
+  <div class="clock">
+    <p class="hands">
+      <svg
+        [style]="`transform: rotate(${hourDeg()}deg)`"
+        class="hour"
+        width="4"
+        height="39"
+        viewBox="0 0 4 39"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M2 2L2 36.2675" stroke="#828282" stroke-width="4" stroke-linecap="round" />
+      </svg>
+      <svg
+        [style]="`transform: rotate(${minDeg()}deg)`"
+        class="minute"
+        width="2"
+        height="51"
+        viewBox="0 0 2 51"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M1 1L1 49.549" stroke="#885FFC" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </p>
+    <p>{{ time() }}</p>
+  </div>
+</div>

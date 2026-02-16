@@ -1,0 +1,39 @@
+.container {
+  color: white;
+  font-weight: 300;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+.clock {
+  display: grid;
+  gap: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.26);
+  width: 5.5rem;
+  height: 10rem;
+  padding: 1rem 0;
+  padding-bottom: 2;
+  text-align: center;
+  border-radius: 5rem;
+}
+h3 {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+.hands {
+  margin-bottom: 1.5rem;
+  position: relative;
+  svg {
+    position: absolute;
+    transform-origin: bottom;
+  }
+}
+.minute {
+  height: 2.5rem;
+  margin-top: -0.2rem;
+  margin-left: 2px;
+}
+.hour {
+  height: 2rem;
+  margin-top: 0.2rem;
+}
