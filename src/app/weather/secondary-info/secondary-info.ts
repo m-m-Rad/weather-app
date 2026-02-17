@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { WeatherService } from '../weather.service';
 import { Clock } from './clock/clock';
 import { Quality } from './quality/quality';

@@ -13,10 +13,11 @@ export class Quality {
   uvFixed = computed(() => this.uv().toFixed(0));
   uvInfo = computed(() => {
     const num = parseInt(this.uvFixed());
-    if (num <= 2) return QUALITYCODE[2];
-    if (num <= 5 && num >= 3) return QUALITYCODE[3 - 5];
-    if (num === 6 || num === 7) return QUALITYCODE[6 - 7];
-    if (num >= 8) return QUALITYCODE[8];
+    if (num <= 2) return QUALITYCODE['2'];
+    if (num <= 5) return QUALITYCODE['3-5'];
+    if (num <= 7) return QUALITYCODE['6-7'];
+    if (num >= 8) return QUALITYCODE['8'];
+
     return { url: '/assets/quality/low.png', name: 'خوب' };
   });
 }
