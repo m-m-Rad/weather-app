@@ -29,7 +29,6 @@ export class MainInfo implements OnInit {
         this.mainInfo.set(respond.current);
         this.weatherService.forCasts.set(respond.forecast.forecastday);
         this.secInfo.set(this.weatherService.forCasts()[0]);
-        console.log(this.secInfo());
       },
       error: (err) => this.error.set('مشکلی پیش آمد'),
       complete: () =>
