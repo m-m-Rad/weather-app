@@ -20,7 +20,7 @@ export class WeatherService {
     switchMap((city) => {
       this.isFetching.set(true);
       return this.http.get<any>(
-        `http://api.weatherapi.com/v1/forecast.json?key=${this.KEY}&q=${city}&days=${this.DAYS}&hour=16`,
+        `https://api.weatherapi.com/v1/forecast.json?key=${this.KEY}&q=${city}&days=${this.DAYS}&hour=16`,
       );
     }),
     shareReplay(1),
