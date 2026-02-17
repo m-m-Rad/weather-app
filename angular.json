@@ -25,9 +25,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ]
+            "styles": ["src/styles.css"]
           },
           "configurations": {
             "production": {
@@ -73,7 +71,7 @@
           "options": {
             "outputPath": "dist/weather-app",
             "netlifyToken": "nfp_XHmhsNaRjNzPcQECisenY7hsRkMSWYHif5e3",
-            "siteId": ""
+            "siteId": "0af235f0-7cd9-49b3-8523-1aecd53a59a4"
           }
         }
       }
