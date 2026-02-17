@@ -67,14 +67,10 @@ h1 {
     .svg-line {
       display: none;
     }
-    /* flex-direction: column;
-    align-items: last baseline;
-    .svg-line {
-      display: none;
-    }
-    p {
-      flex-basis: 100%;
-      flex-grow: 1;
-    } */
+  }
+}
+@media (width<300px) {
+  .forecasts-container {
+    padding: 0;
   }
 }

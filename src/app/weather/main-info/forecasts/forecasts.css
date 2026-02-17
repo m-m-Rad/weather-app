@@ -9,6 +9,7 @@
   display: grid;
   gap: 2rem;
   padding: 0.8rem 1.5rem;
+  min-width: 6.7rem;
   color: white;
   background-color: #e9bcd5;
   border-radius: 0.8rem;
@@ -23,5 +24,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media (width<300px) {
+  :host {
+    display: grid;
+  }
+  .card {
+    min-width: 100%;
+    display: grid;
+    place-content: center;
   }
 }

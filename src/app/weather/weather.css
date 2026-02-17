@@ -12,6 +12,11 @@ article {
   box-shadow: inset 3px 0 rgba(255, 255, 255, 0.1);
   padding: 1rem;
 }
+@media (width>1400px) {
+  main {
+    padding-left: 3rem;
+  }
+}
 @media (width<980px) {
   :host {
     grid-template-columns: 1fr;
