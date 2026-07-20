@@ -70,7 +70,7 @@
           "builder": "@netlify-builder/deploy:deploy",
           "options": {
             "outputPath": "dist/weather-app/browser",
-            "netlifyToken": "nfp_XHmhsNaRjNzPcQECisenY7hsRkMSWYHif5e3",
+            "netlifyToken": "nfp_TWo9eCp6oYbiZ9QRGFaj8Q1fdF8rRdbW174d",
             "siteId": "0af235f0-7cd9-49b3-8523-1aecd53a59a4"
           }
         }
