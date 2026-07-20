@@ -5,7 +5,10 @@ export const WEATHER_ICON_MAP: Record<number, { 0: string; 1: string }> = {
     0: 'assets/weather/night/partly-cloudy.webp',
     1: 'assets/weather/day/partly-cloudy.webp',
   },
-  1006: { 0: 'assets/weather/night/cloudy.webp', 1: 'assets/weather/day/partly-cloudy.webp' },
+  1006: {
+    0: 'assets/weather/night/partly-cloudy.webp',
+    1: 'assets/weather/day/partly-cloudy.webp',
+  },
   1009: { 0: 'assets/weather/night/cloudy.webp', 1: 'assets/weather/day/partly-cloudy.webp' },
 
   // Mist / Fog
