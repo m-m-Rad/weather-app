@@ -10,7 +10,13 @@ import { QUALITYCODE } from './quality-codes';
 export class Quality {
   title = input.required<string>();
   uv = input.required<number>();
-  uvFixed = computed(() => this.uv().toFixed(0));
+  uvFixed = computed(() => {
+    const uv = this.uv().toFixed(0);
+    if (parseInt(uv) > 10) {
+      return '10';
+    }
+    return uv.toString();
+  });
   uvInfo = computed(() => {
     const num = parseInt(this.uvFixed());
     if (num <= 2) return QUALITYCODE['2'];
